@@ -1,3 +1,4 @@
+
 table {
     table-layout: fixed;
     width: 70%;
@@ -36,17 +37,17 @@ thead th, tfoot th {
     text-overflow: ellipsis;
 }
 tbody td {
-  font-size: 26px;
+   font-size: 26px;
    text-align: center;
    word-wrap: break-word;
 }
-#table1 {
+/*#table1 {
     top: 1000px;
 }
 #table2 {
     top: 2000px;
 }
-/*tbody tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
     background-color: #f5f2c6cc;
 }
 tbody tr:nth-child(even) {
@@ -172,7 +173,7 @@ option {
 .shapowal {
     background-color: #a9a9a9;
 }
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
         #staff {
             top: 80px;
             min-width: 50px;
@@ -181,5 +182,92 @@ option {
 	        display: flex;
             white-space: nowrap;
         }
+       #worker {
+            max-height: 200px;
+            left: 85%;
+            top: 270px; 
+            min-width: 30px;
+            max-width: 80px;
+        }
+        #adventure {
+            max-height: 200px;
+            left: 85%;
+            top: 85px; 
+            min-width: 30px;
+            max-width: 80px;
+            text-align: center;
+            word-wrap:break-word;
+        }
 
+    }
+    @media (max-width: 560px) {
+        #staff {
+            left: 0%;
+            top: 5px;
+            width: 200px;
+            height: 70px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            display: inline-block;
+            padding: 3px;
+            margin: 0px;
+        }
+        div #G,
+        div #H {
+            overflow: auto; 
+            font-size: 14px;
+            width: 30px;
+            padding: 3px;
+            margin: 0px;
+        }
+        table {
+            table-layout: fixed;
+            width: 90%;
+            top: 100px;
+            position: relative;
+        }
+        table td, th {
+            font-size: 18px;
+        }
+        thead th, tfoot th {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .horya,
+        .shapowal {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #worker {
+            height: 110px;
+            left: 60%;
+            top: 5px; 
+            width: 90px;
+            font-size: 14px;
+            position: absolute;
+        }
+        #adventure {
+            display: none; 
+        }
+        #table1 caption,
+        #table2 caption,
+        #table3 caption {
+            text-align: left;
+            font-size: 40px;
+        }
+    }
+    @media (max-width: 280px) {
+        #staff {
+            left: 0%;
+            top: 5px;
+            width: 200px;
+            height: 90px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            display: flex;
+            padding: 5px;
+            margin: 5px;
+        }
     }
