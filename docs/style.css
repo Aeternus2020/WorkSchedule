@@ -224,7 +224,7 @@ option {
         table {
             table-layout: fixed;
             width: 90%;
-            top: 100px;
+            top: 150px;
             position: relative;
         }
         table td, th {
@@ -240,15 +240,23 @@ option {
             font-weight: bold;
         }
         #worker {
-            height: 110px;
+            max-height: 205px;
             left: 60%;
             top: 5px; 
-            width: 90px;
+            width: 100px;
+            max-width: 200px;
             font-size: 14px;
             position: absolute;
         }
         #adventure {
-            display: none; 
+            max-height: 200px;
+            left: 5%;
+            top: 60px; 
+            min-width: 150px;
+            text-align: center;
+            word-wrap:break-word;
+            font-size: 14px;
+            position: absolute;
         }
         #table1 caption,
         #table2 caption,
