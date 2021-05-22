@@ -68,13 +68,13 @@ caption {
     text-align: center;
     display: inline-block;
     position: fixed;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
     margin: 5px;
 }
 #worker {
     background-color: #f7c892;
-    max-height: 450px;
+    max-height: 250px;
     left: 85%;
     top: 270px; 
     min-width: 80px;
@@ -183,7 +183,7 @@ option {
             white-space: nowrap;
         }
        #worker {
-            max-height: 200px;
+            max-height: 250px;
             left: 85%;
             top: 270px; 
             min-width: 30px;
@@ -277,5 +277,11 @@ option {
             display: flex;
             padding: 5px;
             margin: 5px;
+        }
+        #adventure {
+            display: none;
+        }
+        #worker {
+            left: 50%;
         }
     }
