@@ -200,5 +200,5 @@ if (difference > 0) {
    mse = '<div>Проверьте правильность вводимых данных.</div>';
  }
 
-calc2.innerHTML = '<br>' + DayN.toLocaleString() + mse;
+calc2.innerHTML = DayN.toLocaleString() + mse;
 }
