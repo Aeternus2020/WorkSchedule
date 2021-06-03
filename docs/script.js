@@ -167,7 +167,9 @@ for (let i = 0; i < 32; i++) {
          let DayNew = new Date(); 
          let DayNew1 = DayNew.getDate();
          if (DayM+1 == DayNew1) {
-            table2.rows[j].cells[i].bgColor = '#ADFF2F';
+           table2.rows[j].cells[i].style.fontSize = '45px';
+           table2.rows[j].cells[i].style.color = '#ee0c0c';
+           table2.rows[j].cells[i].style.fontWeight = 'bold';
            }
          if (DayM >= 0) {
            if ((DayM%4 == 1) || (DayM%4 == 2)) {
