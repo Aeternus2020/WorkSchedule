@@ -260,7 +260,11 @@ option {
         }
         #table1 caption,
         #table2 caption,
-        #table3 caption {
+        #table3 caption,
+	#table4 caption,
+        #table5 caption,
+        #table6 caption,
+        #table7 caption {
             text-align: left;
             font-size: 40px;
         }
