@@ -305,11 +305,12 @@ calc.onclick = function workingDay() {
    let DayN = new Date (day);
    let NDay = new Date(2021, 04, 17); 
    let difference = DayN - NDay;
-   difference1 = difference/60000/60/24;
+   let difference1 = difference/60000/60/24;
    difference1 =  Math.floor(difference1) + 1;
+   let difference2 = DayN -  new Date ();
    let mse;
    let calc1 = document.getElementById('calc1');
-if (difference > 0) {
+if (difference2 > 0) {
    if (difference1%4 == 1) {
     mse = '<div>Это первый рабочий день Алены и Саши.</div>';
    } else if (difference1%4 == 2) {
@@ -319,7 +320,7 @@ if (difference > 0) {
    } else if (difference1%4 == 0) {
     mse = '<div>Это второй рабочий день Серого и Макса.</div>';
    } 
-} else if (difference < 0) {
+} else if (difference2 < 0) {
    mse = '<div>Этот день уже отработан, не думай о прошлом, смотри вперед!</div>';
 } else if (difference !== Number) {
    mse = '<div>Проверьте правильность вводимых данных.</div>';
@@ -327,4 +328,5 @@ if (difference > 0) {
 
 calc2.innerHTML = DayN.toLocaleString() + mse;
 }
+
 
