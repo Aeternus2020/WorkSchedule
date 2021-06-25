@@ -36,6 +36,8 @@ if (i < 2) {
 } 
 }*/
 
+
+// Запоняем таблицу цыфрами
 for (let i = 0; i < 31; i++) {
    if (i < 6) {
     table2.rows[1].cells[i+1].innerHTML = beginDi.getDate(beginDi.setDate(beginDi.getDate() + 1));
@@ -159,6 +161,7 @@ for (let i = 0; i < 32; i++) {
       } 
     }
 
+     // Разукрашиваем таблицу согласно графику работы
       function DayColor (table, j) { 
          for (let i = 0; i < 7; i++) {
          let DayM;
@@ -167,9 +170,9 @@ for (let i = 0; i < 32; i++) {
          let DayNew = new Date(); 
          let DayNew1 = DayNew.getDate();
          if (DayM+1 == DayNew1) {
-           table2.rows[j].cells[i].style.fontSize = '45px';
-           table2.rows[j].cells[i].style.color = '#ee0c0c';
-           table2.rows[j].cells[i].style.fontWeight = 'bold';
+            table2.rows[j].cells[i].style.fontSize = '45px';
+            table2.rows[j].cells[i].style.color = '#ee0c0c';
+            table2.rows[j].cells[i].style.fontWeight = 'bold';
            }
          if (DayM >= 0) {
            if ((DayM%4 == 1) || (DayM%4 == 2)) {
@@ -199,7 +202,7 @@ for (let i = 0; i < 32; i++) {
          } else if (DayM < -1) {
             table.rows[j].cells[i].bgColor = '#f7c892';
          } else if (DayM == DayNew1) {
-            table.rows[j].cells[i].bgColor = 'green'
+            table.rows[j].cells[i].bgColor = 'green';
          }
          }
         }
@@ -218,7 +221,7 @@ for (let i = 0; i < 32; i++) {
          } else if (DayM <= 0) {
             table.rows[j].cells[i].bgColor = '#f7c892';
          } else if (DayM == DayNew1) {
-            table.rows[j].cells[i].bgColor = 'green'
+            table.rows[j].cells[i].bgColor = 'green';
          }
          }
         }
@@ -237,12 +240,12 @@ for (let i = 0; i < 32; i++) {
          } else if (DayM <= 0) {
             table.rows[j].cells[i].bgColor = '#f7c892';
          } else if (DayM == DayNew1) {
-            table.rows[j].cells[i].bgColor = 'green'
+            table.rows[j].cells[i].bgColor = 'green';
          }
          }
         }
 
-
+    // Подсчитываем заработную плату
    function CalcMoneys (tables) {
       let HoryaM = 0;
       let ShapowalM = 0;
@@ -255,8 +258,8 @@ for (let i = 0; i < 32; i++) {
                ShapowalM = ShapowalM +1;
               }
          }
-         tables.rows[6].cells[1].innerHTML = HoryaM + ' дней, <br>' + HoryaM*240 + ' pln.';
-         tables.rows[6].cells[2].innerHTML = ShapowalM + ' дней, <br>' + ShapowalM*240 + ' pln.';
+         tables.rows[6].cells[1].innerHTML = HoryaM + ' дней, <br>' + (HoryaM*240+200) + ' pln.';
+         tables.rows[6].cells[2].innerHTML = ShapowalM + ' дней, <br>' + (ShapowalM*240+200) + ' pln.';
       }
    }
    function CalcMoney (tables) {
@@ -271,8 +274,8 @@ for (let i = 0; i < 32; i++) {
                ShapowalM = ShapowalM +1;
               }
          }
-         tables.rows[7].cells[1].innerHTML = HoryaM + ' дней, <br>' + HoryaM*240 + ' pln.';
-         tables.rows[7].cells[2].innerHTML = ShapowalM + ' дней, <br>' + ShapowalM*240 + ' pln.';
+         tables.rows[7].cells[1].innerHTML = HoryaM + ' дней, <br>' + (HoryaM*240+200) + ' pln.';
+         tables.rows[7].cells[2].innerHTML = ShapowalM + ' дней, <br>' + (ShapowalM*240+200) + ' pln.';
       }
    }
 
@@ -284,7 +287,7 @@ CalcMoneys (table5);
 CalcMoneys (table6);
 CalcMoney (table7);
 
-
+// Подсчитываеи дни до отъезда
 function advent () {
    let DayAdven = new Date(2021, 10, 30); 
    let diff = DayAdven - new Date ();
@@ -296,6 +299,7 @@ function advent () {
 }
 advent ();
 
+// Подсчитываем кто работает в этот день
 calc.onclick = function workingDay() {
    let day = prompt("Введите дату согласно примеру", "2021-06-16");
    let DayN = new Date (day);
@@ -323,3 +327,4 @@ if (difference > 0) {
 
 calc2.innerHTML = DayN.toLocaleString() + mse;
 }
+
