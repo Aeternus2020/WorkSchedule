@@ -1,7 +1,7 @@
 
 //let table1 = document.getElementById('table1');
 //let table2 = document.getElementById('table2');
-let table3 = document.getElementById('table3');
+//let table3 = document.getElementById('table3');
 let table4 = document.getElementById('table4');
 let table5 = document.getElementById('table5');
 let table6 = document.getElementById('table6');
@@ -60,7 +60,7 @@ if (i < 2) {
 
 // Запоняем таблицу цыфрами
 //Июль
-for (let i = 0; i < 32; i++) {
+/*for (let i = 0; i < 32; i++) {
       let textCon = beginDl.getDate(beginDl.setDate(beginDl.getDate() + 1));
       if (i < 4) {
        table3.rows[1].cells[i+3].innerHTML = textCon;
@@ -78,50 +78,51 @@ for (let i = 0; i < 32; i++) {
        table3.rows[5].cells[i-25].innerHTML = textCon;
        DayColors (table3, 5, 6);
       } 
-      }
+      }*/
+
   //Август    
  for (let i = 0; i < 31; i++) {
     let textCon = beginDl.getDate(beginDl.setDate(beginDl.getDate()+1));
      if (i < 1) {
-      table4.rows[1].cells[i+6].innerHTML = textCon -1;
-      DayColorsss (table4, 1);
+      table4.rows[1].cells[i+6].innerHTML = textCon;
+      DayColorsss (table4, 1, 7);
      } else if ( i >=1 && i <= 7) {
-     table4.rows[2].cells[i-1].innerHTML = textCon - 1;
-      DayColorsss (table4, 2);
+     table4.rows[2].cells[i-1].innerHTML = textCon;
+      DayColorsss (table4, 2, 7);
      } else if ( i >= 8 && i <= 14) {
-      table4.rows[3].cells[i-8].innerHTML = textCon - 1;
-    DayColorsss (table4, 3);
+      table4.rows[3].cells[i-8].innerHTML = textCon;
+    DayColorsss (table4, 3, 7);
      } else if (i >= 15 && i <= 21) {
-     table4.rows[4].cells[i-15].innerHTML = textCon - 1;
-      DayColorsss (table4, 4);
+     table4.rows[4].cells[i-15].innerHTML = textCon;
+      DayColorsss (table4, 4, 7);
      } else if (i >= 22 && i <= 28) {
-      table4.rows[5].cells[i-22].innerHTML = textCon - 1;
-    DayColorsss (table4, 5);
+      table4.rows[5].cells[i-22].innerHTML = textCon;
+    DayColorsss (table4, 5 ,7);
      } else if (i == 29) {
-      table4.rows[6].cells[0].innerHTML = textCon - 1;
-      DayColorsss (table4, 6);
+      table4.rows[6].cells[0].innerHTML = textCon;
+      DayColorsss (table4, 6, 7);
      } else if (i == 30) {
-      table4.rows[6].cells[1].innerHTML = textCon + 30;
-      DayColorsss (table4, 6);
+      table4.rows[6].cells[1].innerHTML = textCon;
+      DayColorsss (table4, 6 ,7);
      } 
    }
    //Сентябрь   
  for (let i = 0; i < 33; i++) {
     let textCon = beginDl.getDate(beginDl.setDate(beginDl.getDate()+1));
      if (i < 5) {
-      table5.rows[1].cells[i+2].innerHTML = textCon - 1;
+      table5.rows[1].cells[i+2].innerHTML = textCon;
       DayColor (table5, 1, 8);
     } else if ( i >= 6 && i <= 12) {
-      table5.rows[2].cells[i-6].innerHTML = textCon -2;
+      table5.rows[2].cells[i-6].innerHTML = textCon -1;
       DayColor (table5, 2, 8);
      } else if ( i >= 13 && i <= 19) {
-      table5.rows[3].cells[i-13].innerHTML = textCon - 2;
+      table5.rows[3].cells[i-13].innerHTML = textCon - 1;
       DayColor (table5, 3, 8);
      } else if (i >= 20 && i <= 26) {
-      table5.rows[4].cells[i-20].innerHTML = textCon - 2;
+      table5.rows[4].cells[i-20].innerHTML = textCon - 1;
       DayColor (table5, 4, 8);
      } else if (i >= 27 && i <= 30) {
-      table5.rows[5].cells[i-27].innerHTML = textCon - 2;
+      table5.rows[5].cells[i-27].innerHTML = textCon - 1;
       DayColor (table5, 5, 8);
      } else if (i == 31) {
       table5.rows[5].cells[i-29].innerHTML = 29;
@@ -156,19 +157,19 @@ for (let i = 0; i < 32; i++) {
       let textCon = beginDN.getDate(beginDN.setDate(beginDN.getDate() + 1));
       if (i < 7) {
       table7.rows[1].cells[i].innerHTML = textCon;
-       DayColorsss (table7, 1);
+       DayColorsss (table7, 1, 10);
       } else if ( i >= 7 && i <= 13) {
        table7.rows[2].cells[i-7].innerHTML = textCon;
-     DayColorsss (table7, 2);
+     DayColorsss (table7, 2, 10);
       } else if (i >= 14 && i <= 20) {
       table7.rows[3].cells[i-14].innerHTML = textCon;
-       DayColorsss (table7, 3);
+       DayColorsss (table7, 3, 10);
       } else if (i >= 21 && i <= 27) {
        table7.rows[4].cells[i-21].innerHTML = textCon;
-     DayColorsss (table7, 4);
+     DayColorsss (table7, 4), 10;
       } else if (i >= 28 && i <= 30) {
        table7.rows[5].cells[i-28].innerHTML = textCon;
-       DayColorsss (table7, 5);
+       DayColorsss (table7, 5, 10);
       } 
     }
 
@@ -242,12 +243,18 @@ for (let i = 0; i < 32; i++) {
          }
          }
         }
-        function DayColorsss (table, j) { 
+        function DayColorsss (table, j, x) { 
          for (let i = 0; i < 7; i++) {
          let DayM;
          let DayNew = new Date(); 
          let DayNew1 = DayNew.getDate();
          DayM = table.rows[j].cells[i].textContent;
+         let DayNew2 = DayNew.getMonth();
+         if (x - DayNew2 === 0  && DayM == DayNew1) { 
+            table.rows[j].cells[i].style.fontSize = '45px';
+            table.rows[j].cells[i].style.color = '#ee0c0c';
+            table.rows[j].cells[i].style.fontWeight = 'bold';
+           } 
          if (DayM > 0) {
           if ((DayM%4 == 1) || (DayM%4 == 2) || (DayM%4 == -2)) {
             table.rows[j].cells[i].bgColor = '#7fffd4';
@@ -298,7 +305,7 @@ for (let i = 0; i < 32; i++) {
 
 
 //CalcMoneys (table2);
-CalcMoneys (table3);
+//CalcMoneys (table3);
 CalcMoney (table4);
 CalcMoneys (table5);
 CalcMoneys (table6);
