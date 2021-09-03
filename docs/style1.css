@@ -1,0 +1,498 @@
+
+body {
+    height: 100vh;
+    margin: 0; 
+}
+/*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}*/
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.left {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+}
+.left div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+.left h1 {
+    text-align: center;
+    line-height: 150%;
+    font-family: "Potta One", cursive;
+    font-size: 35px;
+    color: #f3bd0a;
+    text-decoration: blink;
+    text-shadow: #f5dd8d 0 0 10px;
+}
+.right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    transition: transform 1s ease;
+}
+.right div {
+    height: 100%;
+    width: 100%;
+}
+button {
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-family: "Potta One", bold;
+    padding: 14px;
+    font-size: 20px;
+}
+button:hover {
+    color: #504f4fc4;
+}
+button:focus {
+    outline: none;
+}
+.buttons button {
+    position: absolute;
+    left: 15%;
+    top: 27%;
+    z-index: 100;
+}
+.buttons .down {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.buttons .up {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}  
+.november {
+    background-color: #13308d;
+}
+.october {
+    background-color: #126fa0;
+}
+.september {
+    background-color: #84a2bc;
+}
+.august {
+    background-color: #0269a0;
+}
+.july {
+    background-color: #243745;
+}
+.june {
+    background-color: #d36e1c;
+}
+.may {
+    background-color: #7e5e51;
+}
+table {
+    table-layout: fixed;
+    width: 80%;
+    max-width: 800px;
+    border-color: #000000;
+    padding: 5px;
+    margin: 0 auto;
+}
+table td, th {
+    font-size: 16px;
+    border: 2px;
+    border-color: #000000;
+    border-style: solid;
+    padding: 5px;
+    margin: 5px;
+    height: 40px;
+}
+th {
+    background-color: #f7c892;
+}
+thead th:nth-child(1),
+thead th:nth-child(2),
+thead th:nth-child(3),
+thead th:nth-child(4),
+thead th:nth-child(5),
+thead th:nth-child(6),
+thead th:nth-child(7),
+thead th:nth-child(8)
+{
+    width: 19%;
+}
+thead th, tfoot th {
+    font-family: "Potta One", cursive;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+tbody td {
+    font-size: 26px;
+    text-align: center;
+    word-wrap: break-word;
+}
+/*#table1 {
+    top: 1000px;
+}
+#table2 {
+    top: 2000px;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f5f2c6cc;
+}
+tbody tr:nth-child(even) {
+    background-color: #fae2facb;
+}*/
+caption {
+    height: 100px;
+    opacity: 0;
+}
+#worker,
+#staff,
+#adventure {
+    letter-spacing: 1px;
+    text-align: center;
+    display: inline-block;
+    position: fixed;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+}
+#worker {
+    background-color: #f7c892;
+    max-height: 250px;
+    left: 85%;
+    top: 270px; 
+    min-width: 80px;
+    max-width: 550px;
+    border: 2px solid #000000;
+}
+#adventure {
+    background-color: #f7c892;
+    max-height: 270px;
+    left: 85%;
+    top: 85px; 
+    min-width: 30px;
+    max-width: 250px;
+    border: 2px solid #000000;
+}
+#staff {
+    left: 0%;
+    top: 5px;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input {
+    border: 2px solid #f3bd0a;
+    background-color: #f8e49c;
+    box-shadow: 1px 1px 2px #f5dd8d;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+input,
+div {
+    text-align: center;
+    width: auto;
+}
+input {
+    cursor: pointer;
+}
+#G {
+    background-color: #7fffd4;
+    display: inline-block;
+    overflow: hidden;
+    min-width: 80px;
+}
+#H {
+    background-color: #a9a9a9;
+    display: inline-block;
+    overflow: hidden;
+    min-width: 80px;
+}
+#theme-button {
+    display: inline-block;
+    background: #333;
+    color: #ccc;
+    width: 80px;
+    height: 35px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 4px;
+    font-family: "Raleway", sans-serif;
+    transition: 0.6s;
+    overflow: hidden;
+}
+#theme-button:focus {
+    outline: 0;
+}
+/*#theme-button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 80px;
+    height: 35px;
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+#theme-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 35px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+}*/
+#theme-button:hover {
+    background: #338033;
+    cursor: pointer;
+}
+#theme-button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 0.6;
+    transition: 0.7s;
+}
+#theme-button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 0.7s;
+}
+select {
+    padding: 2px;
+    margin: 5px;
+}
+.close {
+    font-size: 10px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}
+option {
+    font-size: 16px;
+}
+.basket {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        background-image: url(img/basket.png);
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+    }
+.money {
+    display:none;
+    }
+.horya {
+    background-color: #7fffd4;
+}
+.shapowal {
+    background-color: #a9a9a9;
+}
+    @media (max-width: 1400px) {
+        #worker {
+            max-width: 330px;
+            top: 5px;
+            left: 30%;
+            height: 65px;
+            background-color: #f7c892;
+            border: 2px solid #000000;
+            max-height: 205px;
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+        input {
+            float: right;
+            margin-top: -10px;
+        }
+        #adventure {
+            font-size: 15px;
+            max-width: 250px;
+            height: 65px;
+            left: 65%;
+            top: 5px; 
+            text-align: center;
+            background-color: #f7c892;
+            border: 2px solid #000000;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #staff {
+            left: 0px;
+            top: 5px;
+            max-width: 250px;
+            height: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            display: inline-block;
+            padding: 3px;
+        }
+    }
+    @media (max-width: 900px) {
+        .left h1 {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .left div {
+            justify-content: flex-end;
+        }
+        #staff {
+            left: 20%;
+            top: 15px; 
+            min-width: 50px;
+            width: 250px;
+            height: 40px;
+            flex-direction: column;
+	        display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            padding: 3px;
+        }
+    #worker {
+            max-width: 200px;
+            top: 10px;
+            left: 0%;
+            min-width: 50px;
+            background: none;
+            border: none;
+            max-height: 205px;
+            width: 100px;
+            font-size: 15px;
+        }
+
+        #adventure {
+            font-size: 20px ;
+            width: 300px;
+            height: 35px;
+            left: 60%;
+            top: 25px; 
+            min-width: 30px;
+            text-align: center;
+            word-wrap:break-word;
+            background: none;
+            border: none;
+        }
+        #adventure p {
+            display: none;
+        }
+        button {
+            font-size: 15px;
+            padding: 10px;
+        }
+        #calc {
+            width: 70px;
+            font-size: 12px;
+        }
+        input {
+            position: absolute;
+            left: 5%;
+            margin-top: 5px;
+        }
+        .horya,
+        .shapowal {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    
+    @media (max-width: 560px) {
+        #staff {
+            left: 0px;
+            top: 5px;
+            width: 250px;
+            height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            display: inline-block;
+            padding: 3px;
+        }
+        #G,
+        #H,
+        #theme-button {
+            overflow: hidden; 
+            font-size: 16px;
+            width: 30px;
+            padding: 3px;
+            margin: 0px;
+            min-width: 60px;
+        }
+        table {
+            table-layout: fixed;
+            width: 90%;
+            top: 70px;
+            position: relative;
+        }
+        table td, th {
+            font-size: 18px;
+        }
+        thead th, tfoot th {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .horya,
+        .shapowal {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #worker {
+            max-height: 205px;
+            left: 60%;
+            top: 5px; 
+            width: 100px;
+            max-width: 200px;
+            font-size: 12px;
+            position: absolute;
+        }
+        #adventure {
+            max-height: 200px;
+            left: 5%;
+            top: 80px; 
+            min-width: 150px;
+            text-align: center;
+            word-wrap:break-word;
+            font-size: 18px;
+            position: absolute;
+        }
+    }
+    @media (max-width: 280px) {
+        #staff {
+            left: 0%;
+            top: 5px;
+            width: 200px;
+            height: 90px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            display: flex;
+            padding: 5px;
+            margin: 5px;
+        }
+        #adventure {
+            display: none;
+        }
+        #worker {
+            left: 50%;
+        }
+    }
