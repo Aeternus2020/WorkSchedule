@@ -274,6 +274,7 @@ for (let i = 0; i < 32; i++) {
          }
         }
 
+        table5.rows[1].cells[3].bgColor = '#a9a9a9';
     // Подсчитываем заработную плату
    function CalcMoneys (tables) {
       let HoryaM = 0;
@@ -360,6 +361,8 @@ calc2.innerHTML = DayN.toLocaleString() + mse;
 window.onbeforeunload = function() {
    return false;
  };
+
+
  //пока нет Серого
 function NotSerego(table, j, i) {
    table.rows[j].cells[i].style.textDecoration = 'underline overline'; 
@@ -374,7 +377,7 @@ NotSerego(table4, 5, 4);
 NotSerego(table4, 5, 5);
 NotSerego(table4, 5, 6);
 NotSerego(table4, 6, 0);
-NotSerego(table5, 1, 2);
+//NotSerego(table5, 1, 2);
 NotSerego(table5, 1, 3);
 NotSerego(table5, 1, 4);
 NotSerego(table5, 1, 6);
@@ -438,6 +441,7 @@ function switchTheme() {
    element.classList.add('light');
    }
 }
+
 
 /*let scrollId;
 function scroll (table) {
