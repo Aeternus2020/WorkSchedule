@@ -260,7 +260,7 @@ option {
         #staff {
             left: 0px;
             top: 5px;
-            width: 250px;
+            width: 200px;
             height: 50px;
             white-space: nowrap;
             overflow: hidden;
@@ -273,10 +273,10 @@ option {
         #H,
         #theme-button {
             overflow: hidden; 
-            font-size: 14px;
+            font-size: 12px;
             padding: 3px;
             margin: 0px;
-            min-width: 60px;
+            min-width: 50px;
         }
         table {
             table-layout: fixed;
@@ -327,6 +327,13 @@ option {
             font-size: 40px;
         }
     }
+    @media (max-width: 320px) {
+        #G,
+        #H,
+        #theme-button {
+            min-width: 40px;
+        }
+    }
     @media (max-width: 280px) {
         #staff {
             left: 0%;
@@ -345,5 +352,13 @@ option {
         }
         #worker {
             left: 50%;
+        }
+        table td, th {
+            font-size: 12px;
+        }
+        .horya,
+        .shapowal {
+            font-size: 12px;
+            font-weight: bold;
         }
     }

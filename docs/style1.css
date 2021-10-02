@@ -15,7 +15,7 @@ body {
 }
 .left {
     height: 100%;
-    width: 15%;
+    width: 16%;
     position: absolute;
     top: 0;
     left: 0;
@@ -68,8 +68,8 @@ button:focus {
 }
 .buttons button {
     position: absolute;
-    left: 15%;
-    top: 27%;
+    left: 16%;
+    top: 26%;
     z-index: 100;
 }
 .buttons .down {
@@ -157,7 +157,7 @@ tbody tr:nth-child(even) {
     background-color: #fae2facb;
 }*/
 caption {
-    height: 100px;
+    height: 200px;
     opacity: 0;
 }
 #worker,
@@ -229,7 +229,7 @@ input {
     background: #333;
     color: #ccc;
     width: 80px;
-    height: 35px;
+    height: 30px;
     border: 0;
     font-size: 18px;
     border-radius: 4px;
@@ -345,6 +345,11 @@ option {
             display: inline-block;
             padding: 3px;
         }
+        .buttons button {
+            position: absolute;
+            left: 14%;
+            top: 26%;
+        }
     }
     @media (max-width: 900px) {
         .left h1 {
@@ -383,7 +388,7 @@ option {
 
         #adventure {
             font-size: 20px ;
-            width: 300px;
+            width: 200px;
             height: 35px;
             left: 60%;
             top: 25px; 
@@ -420,7 +425,7 @@ option {
         #staff {
             left: 0px;
             top: 5px;
-            width: 250px;
+            width: 210px;
             height: 50px;
             white-space: nowrap;
             overflow: hidden;
@@ -432,11 +437,11 @@ option {
         #H,
         #theme-button {
             overflow: hidden; 
-            font-size: 16px;
+            font-size: 11px;
             width: 30px;
             padding: 3px;
             margin: 0px;
-            min-width: 60px;
+            min-width: 50px;
         }
         table {
             table-layout: fixed;
@@ -445,7 +450,7 @@ option {
             position: relative;
         }
         table td, th {
-            font-size: 18px;
+            font-size: 12px;
         }
         thead th, tfoot th {
             font-size: 12px;
@@ -453,7 +458,7 @@ option {
         }
         .horya,
         .shapowal {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: bold;
         }
         #worker {
@@ -467,20 +472,34 @@ option {
         }
         #adventure {
             max-height: 200px;
-            left: 5%;
-            top: 80px; 
+            left: 1%;
+            top: 65px; 
             min-width: 150px;
             text-align: center;
             word-wrap:break-word;
             font-size: 18px;
             position: absolute;
         }
+        .buttons button {
+            position: absolute;
+            left: 20%;
+            top: 25%;
+        }
+        caption {
+            height: 150px;
+        }
     }
+    @media (max-width: 320px) {
+        caption {
+            height: 70px;
+        }
+    }
+
     @media (max-width: 280px) {
         #staff {
             left: 0%;
             top: 5px;
-            width: 200px;
+            width: 70px;
             height: 90px;
             white-space: nowrap;
             overflow: hidden;

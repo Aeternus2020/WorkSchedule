@@ -358,12 +358,15 @@ if (difference2 > 0) {
 
 calc2.innerHTML = DayN.toLocaleString() + mse;
 }
-window.onbeforeunload = function() {
+
+//Вопрос перед перезагрузкой
+/*window.onbeforeunload = function() {
    return false;
- };
+ };*/
 
 
  //пока нет Серого
+ /*
 function NotSerego(table, j, i) {
    table.rows[j].cells[i].style.textDecoration = 'underline overline'; 
 }
@@ -387,7 +390,7 @@ NotSerego(table5, 2, 3);
 NotSerego(table5, 2, 4);
 NotSerego(table5, 2, 6);
 NotSerego(table5, 3, 0);
-
+*/
 //Сладеры
 
 let wrapper = document.querySelector('.wrapper')
@@ -396,7 +399,7 @@ let left = document.querySelector('.left')
 let up = document.querySelector('.up')
 let down= document.querySelector('.down')
 let slidesLength = right.querySelectorAll('div').length
-let activeSlideIndex = 3
+let activeSlideIndex = 4
 
 left.style.top = `-${
    (slidesLength - 1)*100
@@ -439,9 +442,9 @@ function switchTheme() {
    element.href = 'style.css';
    element.classList.remove('dark')
    element.classList.add('light');
+   location.reload();
    }
 }
-
 
 /*let scrollId;
 function scroll (table) {
@@ -453,4 +456,4 @@ function scroll (table) {
    }  
 }*/
 
-document.getElementById("table5").scrollIntoView({behavior: 'smooth'});
+document.getElementById("table6").scrollIntoView({behavior: 'smooth'});
