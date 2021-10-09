@@ -63,6 +63,7 @@ caption {
     text-decoration: blink;
     text-shadow: #f5dd8d 0 0 10px;
     text-align: center;
+    height: 100px;
 }
 #worker,
 #staff,

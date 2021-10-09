@@ -139,19 +139,19 @@ for (let i = 0; i < 32; i++) {
    let textCon = beginDO.getDate(beginDO.setDate(beginDO.getDate()+1));
    if (i < 3) {
      table6.rows[1].cells[i+4].innerHTML = textCon;
-      DayColors (table6, 1, 9);
+      DayColorsss (table6, 1, 9);
      } else if ( i >= 3 && i <= 9) {
       table6.rows[2].cells[i-3].innerHTML = textCon;
-      DayColors (table6, 2, 9);
+      DayColorsss (table6, 2, 9);
      } else if ( i >= 10 && i <= 16) {
      table6.rows[3].cells[i-10].innerHTML = textCon;
-     DayColors (table6, 3, 9);
+     DayColorsss (table6, 3, 9);
      } else if (i >= 17 && i <= 23) {
       table6.rows[4].cells[i-17].innerHTML = textCon;
-      DayColors (table6, 4 ,9);
+      DayColorsss (table6, 4 ,9);
      } else if (i >= 24 && i <=31) {
       table6.rows[5].cells[i-24].innerHTML = textCon;
-     DayColors (table6, 5, 9);
+     DayColorsss (table6, 5, 9);
     } 
     }
     //Ноябрь
@@ -159,19 +159,19 @@ for (let i = 0; i < 32; i++) {
       let textCon = beginDN.getDate(beginDN.setDate(beginDN.getDate() + 1));
       if (i < 7) {
       table7.rows[1].cells[i].innerHTML = textCon;
-       DayColorsss (table7, 1, 10);
+       DayColor (table7, 1, 10);
       } else if ( i >= 7 && i <= 13) {
        table7.rows[2].cells[i-7].innerHTML = textCon;
-     DayColorsss (table7, 2, 10);
+     DayColor (table7, 2, 10);
       } else if (i >= 14 && i <= 20) {
       table7.rows[3].cells[i-14].innerHTML = textCon;
-       DayColorsss (table7, 3, 10);
+       DayColor (table7, 3, 10);
       } else if (i >= 21 && i <= 27) {
        table7.rows[4].cells[i-21].innerHTML = textCon;
-     DayColorsss (table7, 4, 10);
+     DayColor (table7, 4, 10);
       } else if (i >= 28 && i <= 30) {
        table7.rows[5].cells[i-28].innerHTML = textCon;
-       DayColorsss (table7, 5, 10);
+       DayColor (table7, 5, 10);
       } 
     }
 
@@ -324,7 +324,7 @@ function advent () {
    let diff1 = diff/60000/60/24;
    diff1 = Math.floor(diff1) + 1;
    if (diff1 > 0) {
-  adventure.insertAdjacentHTML('beforeend', + diff1 + ' д. или ' + Math.floor(diff1/4) + ' с.');
+  adventure.insertAdjacentHTML('beforeend', + diff1 + 5 +' д. или ' + Math.floor(diff1/4) + ' с.');
 }
 }
 advent ();
@@ -341,14 +341,14 @@ calc.onclick = function workingDay() {
    let mse;
    let calc1 = document.getElementById('calc1');
 if (difference2 > 0) {
-   if (difference1%4 == 1) {
+   if (difference1%4 == 2) {
     mse = '<div>Это первый рабочий день Алены и Саши.</div>';
-   } else if (difference1%4 == 2) {
-    mse = '<div>Это второй рабочий день Алены и Саши.</div>';
    } else if (difference1%4 == 3) {
-    mse = '<div>Это первый рабочий день Серого и Макса.</div>';
+    mse = '<div>Это второй рабочий день Алены и Саши.</div>';
    } else if (difference1%4 == 0) {
-    mse = '<div>Это второй рабочий день Серого и Макса.</div>';
+    mse = '<div>Это первый рабочий день Серого и Марины.</div>';
+   } else if (difference1%4 == 1) {
+    mse = '<div>Это второй рабочий день Серого и Марины.</div>';
    } 
 } else if (difference2 < 0) {
    mse = '<div>Этот день уже отработан.</div>';

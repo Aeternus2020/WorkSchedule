@@ -83,36 +83,36 @@ button:focus {
     border-bottom-right-radius: 5px;
 }  
 .november {
-    background-color: #13308d;
+    background-color: #C3FBD8;
 }
 .october {
-    background-color: #126fa0;
+    background-color: #fffadd;
 }
 .september {
-    background-color: #84a2bc;
+    background-color: #B5F2EA;
 }
 .august {
-    background-color: #0269a0;
+    background-color: #FDEED9;
 }
 .july {
-    background-color: #243745;
+    background-color: #DEF7FE;
 }
 .june {
-    background-color: #d36e1c;
+    background-color: #fed6bc;
 }
 .may {
-    background-color: #7e5e51;
+    background-color: #C6D8FF;
 }
 table {
-    table-layout: fixed;
-    width: 80%;
-    max-width: 800px;
+    /*table-layout: fixed;*/
+    width: 100%;
+    max-width: 700px;
     border-color: #000000;
-    padding: 5px;
+    padding: 15px;
     margin: 0 auto;
 }
 table td, th {
-    font-size: 16px;
+    font-size: 14px;
     border: 2px;
     border-color: #000000;
     border-style: solid;
@@ -132,7 +132,7 @@ thead th:nth-child(6),
 thead th:nth-child(7),
 thead th:nth-child(8)
 {
-    width: 19%;
+    width: 17%;
 }
 thead th, tfoot th {
     font-family: "Potta One", cursive;
@@ -140,7 +140,7 @@ thead th, tfoot th {
     text-overflow: ellipsis;
 }
 tbody td {
-    font-size: 26px;
+    font-size: 22px;
     text-align: center;
     word-wrap: break-word;
 }
@@ -157,7 +157,7 @@ tbody tr:nth-child(even) {
     background-color: #fae2facb;
 }*/
 caption {
-    height: 200px;
+    height: 100px;
     opacity: 0;
 }
 #worker,
@@ -302,9 +302,13 @@ option {
     }
 .horya {
     background-color: #7fffd4;
+    font-size: 18px;
+    font-weight: bold;
 }
 .shapowal {
     background-color: #a9a9a9;
+    font-size: 18px;
+    font-weight: bold;
 }
     @media (max-width: 1400px) {
         #worker {
@@ -416,7 +420,7 @@ option {
         }
         .horya,
         .shapowal {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
         }
     }
@@ -486,7 +490,7 @@ option {
             top: 25%;
         }
         caption {
-            height: 150px;
+            height: 80px;
         }
     }
     @media (max-width: 320px) {
