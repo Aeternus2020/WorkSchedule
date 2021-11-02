@@ -487,10 +487,13 @@ option {
         .buttons button {
             position: absolute;
             left: 20%;
-            top: 25%;
+            top: 21%;
         }
         caption {
             height: 80px;
+        }
+        .left h1 {
+            margin: 20px;
         }
     }
     @media (max-width: 320px) {

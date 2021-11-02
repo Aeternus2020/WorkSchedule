@@ -318,7 +318,7 @@ CalcMoneys (table6);
 CalcMoneys (table7);
 
 // Подсчитываеи дни до отъезда
-function advent () {
+(function () {
    let DayAdven = new Date(2021, 10, 30); 
    let diff = DayAdven - new Date ();
    let diff1 = diff/60000/60/24;
@@ -326,8 +326,8 @@ function advent () {
    if (diff1 > 0) {
   adventure.insertAdjacentHTML('beforeend', + diff1 + 5 +' д. или ' + Math.floor(diff1/4) + ' с.');
 }
-}
-advent ();
+}) ();
+
 
 // Подсчитываем кто работает в этот день
 calc.onclick = function workingDay() {
@@ -456,4 +456,4 @@ function scroll (table) {
    }  
 }*/
 
-document.getElementById("table6").scrollIntoView({behavior: 'smooth'});
+document.getElementById("table7").scrollIntoView({behavior: 'smooth'});
