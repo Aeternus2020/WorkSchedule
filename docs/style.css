@@ -63,7 +63,8 @@ caption {
     text-decoration: blink;
     text-shadow: #f5dd8d 0 0 10px;
     text-align: center;
-    height: 100px;
+    height: 60px;
+
 }
 #worker,
 #staff,
@@ -282,7 +283,7 @@ option {
         table {
             table-layout: fixed;
             width: 90%;
-            top: 150px;
+            top: 170px;
             position: relative;
         }
         table td, th {
